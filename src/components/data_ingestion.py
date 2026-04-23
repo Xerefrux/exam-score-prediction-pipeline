@@ -26,7 +26,8 @@ class DataIngestion:
     def initiate_data_ingestion(self):
         logging.info("Entered the data ingestion method or component")
         try:
-            df=pd.read_csv('E:\\Data Science Projects\\notebook\\data\\stud.csv')
+            # Using os.path.join ensures this works on both Windows and Linux
+            df = pd.read_csv(os.path.join('data', 'stud.csv'))
             logging.info("Read the dataset as dataframe.")
             
             os.makedirs(os.path.dirname(self.ingestion_config.train_data_path), exist_ok=True)
