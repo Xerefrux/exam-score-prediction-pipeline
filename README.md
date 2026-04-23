@@ -131,27 +131,49 @@ prediction form.
 
 ## Project Structure
 ├── data/
+
 │   └── stud.csv                    # Raw dataset
+
 ├── src/
+
 │   ├── components/
+
 │   │   ├── data_ingestion.py       # Reads, splits, and saves raw data
+
 │   │   ├── data_transformation.py  # Builds and fits preprocessing pipeline
+
 │   │   └── model_trainer.py        # Trains, tunes, and selects best model
+
 │   ├── pipeline/
+
 │   │   └── predict_pipeline.py     # Loads artifacts and runs inference
+
 │   ├── exception.py                # Custom exception with traceback details
+
 │   ├── logger.py                   # Timestamped rotating file logger
+
 │   └── utils.py                    # Shared helpers: save/load objects,
+
 │                                   # evaluate and compare models
+
 ├── templates/
+
 │   └── home.html                   # Flask prediction form (HTML)
+
 ├── artifacts/                      # Auto-generated during training:
+
 │   ├── model.pkl                   #   Serialized best model
+
 │   ├── preprocessor.pkl            #   Serialized preprocessing pipeline
+
 │   ├── train.csv                   #   Training split
+
 │   └── test.csv                    #   Test split
+
 ├── application.py                  # Flask app entry point (WSGI)
+
 ├── Procfile                        # Render start command
+
 └── requirements.txt                # Python dependencies
 
 ---
