@@ -98,7 +98,7 @@ runs correctly on both Windows (development) and Linux (production server).
 |---|---|
 | Best Model (auto-selected) | **0.8804332983749565** |
 
-The best model explains approximately **[X]%** of the variance in student
+The best model explains approximately **88.04%** of the variance in student
 math scores on the held-out test set.
 
 > To see which model won and view the full comparison, run the training
